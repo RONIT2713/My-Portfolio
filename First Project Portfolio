@@ -1,0 +1,387 @@
+/* USE YOUR OWN IMAGE FOR THE PORTFOLIO  */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        
+  
+   
+    
+    <style>
+            body {
+                margin: 0;
+                background-color: black;
+                color: grey;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;    
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+ /* LEFT-SIDE NAVIGATION BAR */
+            .navigation-bar {
+                background-color: #222;
+                width: 120px;
+                height: 100vh; /* Full height */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20px;
+                position: fixed; /* Keeps it stuck to the left */
+                left: 0;
+                top: 0;
+            }
+
+/* MAIN CONTENT AREA */
+            .main-content {
+                margin-left: 180px; /* Push content to the right of nav */
+                padding: 20px;
+                flex-grow: 1;
+                margin-right: 120px;
+
+            }
+
+
+ /* NAVIGATION ICONS */
+            .nav_icons {
+                color: grey;
+                width: 100%;
+                text-decoration: none;
+                margin: 0;
+                text-align: center;
+                transition: background-color 0.3s ease;
+            }
+
+            .nav_icons:hover {
+                background-color: #111;
+                cursor: pointer;
+            }
+
+            .nav_icons i {
+                transition: transform 0.3s ease;
+            }
+            .nav_icons:hover i {
+                transform: scale(1.1);
+            }
+
+/* MAIN CONTENT AREA */
+
+            .my_name {
+                color: grey;
+                margin-top: 40px;
+                text-align: center;
+                font-family: berlin sans fb;
+                font-size: 28px;
+            }
+
+/* RESUME DOWNLOAD BUTTON */
+            button {
+                background-color: grey;
+                color: black;
+                border: none;
+                padding: 10px 20px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+            button:hover {
+                background-color: #444;
+                color: white;
+                cursor: pointer;
+            }
+
+/* MY CERTIFICATES AREA */
+
+            .certificates , li {
+                border: 2px solid grey;
+                background-color: grey;
+                color: #111;
+                list-style-type: decimal;
+
+            }
+
+            .certificates:hover {
+                background-color: #444;
+                color: whitesmoke;
+                transform: scale(1.02);
+                transition: transform 0.3s ease;
+            }
+            .my_certificates {
+                text-decoration: none;
+                color: #111;
+            }
+
+/* MY IMAGE AREA */
+
+            .image-gallery {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+                gap: 20px;
+                margin-top: 20px;
+                padding: 0 20px;
+            }
+
+            .my_image {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+                transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+            }
+
+            .my_image:hover {
+                transform: scale(1.05) rotate(-1deg);
+                box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+                filter: brightness(1.01) contrast(1);
+                cursor: pointer;
+            }
+
+/* CONTACT INFO AREA */
+
+            .contact_icons {
+                cursor: default;
+                display: inline-block;
+                padding: 1px 5px;
+            }
+
+
+            .contact_info {
+                padding-top: 3px;
+            
+            }
+/* STILL HAVE TO DESIGN AND REWRITE THIS */
+
+            input,textarea {
+                width: 100%;
+                height: 50px;
+                padding: 4px;
+            }
+
+/* FOLLOW ICONS AREA */
+
+            .follow_icon {
+                font-size: 28px;
+                color: #444;
+            }
+
+
+
+
+
+
+
+
+            @media (max-width: 1024px) {
+              .main-content {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 10px;
+              }
+            }
+
+            @media (max-width: 768px) {
+              .navigation-bar {
+                flex-direction: row;
+                height: auto;
+                width: 100%;
+                position: static;
+              }
+          
+              .nav_icons i {
+                font-size: 36px;
+              }
+          
+              .image-gallery {
+                grid-template-columns: 1fr;
+              }
+          
+
+
+            }
+        </style>
+
+        
+
+
+</head>
+<body>
+
+<!-- NAVIGATION ICONS -->
+
+  <nav class="navigation-bar">
+        <img src="img_start.jpg" alt="MY_IMAGE" style="width: 100%; height: 120px;">
+
+        <a href="#" class="nav_icons">
+            <i class="fa-duotone fa-solid fa-house" style="font-size: 58px; padding-top: 20px;"></i>
+            <p>HOME</p>
+        </a>
+
+        <a href="#about" class="nav_icons">
+            <i class="material-icons" style="font-size: 68px;">person</i>
+            <p>ABOUT</p>
+        </a>
+
+        <a href="#photos" class="nav_icons">
+            <i class="material-icons" style="font-size: 68px;">photo_library</i>
+            <p>PHOTOS</p>
+        </a>
+
+        <a href="#contact" class="nav_icons">
+            <i class="material-icons" style="font-size: 68px;">mail</i>
+            <p>CONTACT</p>
+        </a>
+    </nav>
+<!-- MAIN CONTENT STARTING FROM HERE -->
+    <div class="main-content">
+        <header class="my_name">
+            <h1>I'm Ronit Rai</h1>
+            <p class="my_name">Student and Web Designer</p>
+        </header>
+
+<!-- MY IMAGE -->
+        <img src="img_start.jpg" alt="My Image" width="100%" style="margin: 0;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+<!-- ABOUT MYSELF -->
+
+        <h1  id="about" >My Name</h1>
+        <hr style="margin-right: 950px;">
+        <p style="margin-left: 5vw;">Hello Everyone , My name is Ronit Rai and I am from Ballia UttarPradesh.
+            I am pursuing my Bachelor of Computer Applications(BCA),5th semester from Noida International University.
+            I have a keen interest in programming , web development, and exploring new technologies. Recently, I have worked on this 
+            profile page which i made using "HTML AND CSS", which has helped me strengthen my practical knowledge.
+            I am eager to enhance my technical and communication skills and prepare myself for future professional opportunities.
+            I look forward to contribute my skills to a professional environment.Thank You.  </p>
+
+            <br>
+            <br>
+
+<!-- ABOUT MY SKILLS -->
+
+        <h1>My Skills</h1>
+        <hr style="margin-right: 950px;">   
+        <h3 style="margin-left: 80px;">HTML</h3>
+        <h3 style="margin-left: 80px;">CSS</h3>
+        <h3 style="margin-left: 80px;">JAVASCRIPT</h3>
+        <h3 style="margin-left: 80px;">PYTHON</h3><br>
+        <br>
+
+<!-- MY RESUME -->
+
+        <a href="Ronit Resume.pdf" target="_blank" download="">
+            <button style= "border-radius: 10px; height: 40px;" >DOWNLOAD RESUME</button>
+        </a>
+        <br>
+        <br>
+        <br>
+
+<!-- MY CERTIFICATES SECTION -->
+
+        <h1> My Certificates</h1>
+        <hr style="margin-right: 900px;"> 
+        <div style="background-color: grey">
+
+           <ul>
+           
+            <li  class="certificates">
+                <a href="Tata Cybersecurity.pdf" target="_blank" alt="Cybersecurity Certificate" class="my_certificates" >Cybersecurity Certificate</a>
+            </li>
+           
+            <li  class="certificates">
+                <a href="Gen Power Ai.pdf" target="_blank" alt="GenAI Powered C" class="my_certificates" > GenAI Powered Data Analytics</a>
+            </li>
+           
+            <li class="certificates">
+                <a href="AWS certificate.pdf" target="_blank" alt="AWS Certificate" class="my_certificates">AWS Certificate</a>
+            </li>    
+           
+            <li class="certificates">
+                <a href="Electronic Art certificate.pdf" target="_blank" alt="Electronic Art Certificate" class="my_certificates">Electronic Art Certificate</a>
+            </li>    
+           
+            <li class="certificates">
+                <a href="Tata ESG certificate .pdf" target="_blank" alt="TATA ESG Certificate" class="my_certificates">TATA ESG Certificate</a>
+            </li>
+           </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+
+<!-- MY IMAGE SECTION -->
+
+        <h1 id="photos">My Photos</h1>
+        <hr style="margin-right: 900px;"> 
+        <div class="image-gallery">
+            <img src="img6.jpg" class="my_image">
+            <img src="img1.jpg" class="my_image">
+            <img src="img5.jpg" class="my_image" style="height: 950px;">
+            <img src="img2.jpg" class="my_image" style="margin-top: 0; height: 600px ;">
+            <img src="img3.jpg" class="my_image">
+            <img src="img4.jpg" class="my_image" style="margin-top: -350px; height: 500px;">
+            <img src="img7.jpg" class="my_image" >
+            <img src="img8.jpg" class="my_image" style="margin-top: -350px; height: 852px;" >
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+<!-- CONTACT SECTION -->
+
+        <h1 id="contact">Contact Me</h1>
+        <hr style="margin-right: 900px;">
+         <i class="material-icons contact_icons" style="font-size: 48px;">location_on</i>
+         <h2 class="contact_icons">Awas Vikas Colony Ballia 277001</h2>
+         <br>
+         <i class="material-icons contact_icons" style="font-size: 48px;">call</i>
+         <h2 class="contact_icons">9219035722 </h2>
+         <br>
+         <i class="material-icons contact_icons" style="font-size: 48px;">mail</i>
+         <h2 class="contact_icons">ronitrai270@gmail.com</h2>
+         <br>
+         <br>
+         <br>
+
+<!-- FOLLOW ME ICONS -->
+
+         <h4>Follow Me</h4>
+         <a href="https://www.instagram.com/ronit_.4?igsh=OXp2a2x3OXBlNXph" target="_blank">
+             <i class="fab fa-instagram follow_icon"></i>
+         </a>
+         
+
+         <a href="https://www.linkedin.com/in/ronit-rai-b9z" target="_blank">
+                <i class="fab fa-linkedin follow_icon"></i>
+         </a>
+
+         <a href="https://www.snapchat.com/add/g_ron13?share_id=r5YN0b5ELRI&locale=en-GB" target="_blank">
+                <i class="fa-brands fa-snapchat follow_icon"></i>
+         </a>
+
+         <a href="https://www.threads.com/@ronit_.4" target="_blank">
+                <i class="fa-brands fa-threads follow_icon"></i>
+         </a>
+    </div>
+</body>
+</html>
